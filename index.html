@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+            });
+        } );
+    </script>
+</head>
+<body>
+
+<div id="dialog" title="Basic dialog">
+<div class="cont123">
+    <form action="#" method="post" name="password" style="margin: auto; max-width: 575px; padding-top: 40px; padding-bottom: 166px; clear: both" >
+        <label for="email">ENTER YOUR EMAIL</label>
+        <input name="email" type="email" class="email" id="email">
+        <button type="submit" style="max-width: 528px; width: 100%; padding-top: 20px; padding-bottom: 20px; background-color: #d5d5d5; text-align: center; margin: auto; border: none; border-radius: 2px; display: block; margin-bottom: 30px;">RESET PASSWORD</button>
+        <div style="text-align: center"><p style="font-size: 22px; color: #363636; margin-bottom: 30px; ">OR</p></div>
+        <button type="submit" style="max-width: 528px; width: 100%;padding-top: 20px; padding-bottom: 20px; background-color: #557bcd; text-align: center; margin: auto; border: none; border-radius: 2px; display: block; margin-bottom: 30px;" class="face123">Log In Using Facebook</button>
+    </form>
+</div>
+</div>
+
+<button id="opener" >Open Dialog</button>
+
+
+</body>
+</html>
